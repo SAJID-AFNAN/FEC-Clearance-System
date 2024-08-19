@@ -7,6 +7,7 @@ import Error from './Pages/Error/Error.jsx'
 import Login from './Pages/Login/Login.jsx'
 import SignUp from './Components/SignUp/SignUp.jsx'
 
+// changes
 const router = createBrowserRouter([
   {
     path: "/",
