@@ -1,10 +1,10 @@
+
 const Dashboard = () => {
-    return (
-        <div>
-            <div>Profile</div>
-            <div>Apply</div>
-        </div>
-    );
+  return (
+    <div>
+      
+    </div>
+  );
 };
 
 export default Dashboard;

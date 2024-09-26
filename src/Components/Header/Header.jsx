@@ -2,8 +2,9 @@ import { NavLink } from "react-router-dom";
 
 const links = <>
     <li><NavLink to="/">Home</NavLink></li>
-    {/* <li><NavLink to="/statistics">Statistics</NavLink></li>
-    <li><NavLink to="/applied">Applied Jobs</NavLink></li> */}
+    <li><NavLink to="/dashboard">Dashboard</NavLink></li>
+    <li><NavLink to="/history">History</NavLink></li>
+    <li><NavLink to="/analytics">Analytics</NavLink></li>
     <li><NavLink to="/signup">SignUp</NavLink></li>
 </>
 const Header = () => {
