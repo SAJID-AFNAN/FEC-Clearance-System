@@ -6,6 +6,9 @@ import Root from './Pages/Root/Root.jsx'
 import Error from './Pages/Error/Error.jsx'
 import Login from './Pages/Login/Login.jsx'
 import SignUp from './Components/SignUp/SignUp.jsx'
+import Dashboard from './Pages/Dashboard/Dashboard.jsx'
+import Analytics from './Pages/Analytics/Analytics.jsx'
+import History from './Pages/HIstory/History.jsx'
 
 const router = createBrowserRouter([
   {
@@ -20,7 +23,20 @@ const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUp></SignUp>
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard></Dashboard>
+      },
+      {
+        path: "/analytics",
+        element: <Analytics></Analytics>
+      },
+      {
+        path: "/history",
+        element: <History></History>
       }
+
     ]
   }
 ])
