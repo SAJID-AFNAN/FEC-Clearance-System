@@ -74,7 +74,7 @@ const Sidebar = () => {
                             <ShoppingBagIcon className="h-5 w-5" />
                         </ListItemPrefix>
                         <Typography color="blue-gray" className="mr-auto font-normal">
-                            E-Commerce
+                            <NavLink to="/apply">Apply</NavLink>
                         </Typography>
                     </ListItem>
                 </Accordion>
@@ -83,7 +83,7 @@ const Sidebar = () => {
                     <ListItemPrefix>
                         <InboxIcon className="h-5 w-5" />
                     </ListItemPrefix>
-                    Inbox
+                    <NavLink to="/inbox">Inbox</NavLink>
                     <ListItemSuffix>
                         <Chip value="14" size="sm" variant="ghost" color="blue-gray" className="rounded-full" />
                     </ListItemSuffix>
@@ -92,13 +92,13 @@ const Sidebar = () => {
                     <ListItemPrefix>
                         <UserCircleIcon className="h-5 w-5" />
                     </ListItemPrefix>
-                    Profile
+                    <NavLink to="/profile">Profile</NavLink>
                 </ListItem>
                 <ListItem>
                     <ListItemPrefix>
                         <Cog6ToothIcon className="h-5 w-5" />
                     </ListItemPrefix>
-                    Settings
+                    <NavLink to="/settings">Settings</NavLink>
                 </ListItem>
                 <ListItem>
                     <ListItemPrefix>
