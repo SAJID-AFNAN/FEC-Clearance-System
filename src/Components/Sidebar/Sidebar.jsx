@@ -1,4 +1,4 @@
-const Analytics = () => {
+const Sidebar = () => {
     return (
         <div>
             
@@ -6,4 +6,4 @@ const Analytics = () => {
     );
 };
 
-export default Analytics;
+export default Sidebar;

@@ -1,4 +1,4 @@
-const History = () => {
+const Home = () => {
     return (
         <div>
             
@@ -6,4 +6,4 @@ const History = () => {
     );
 };
 
-export default History;
+export default Home;
