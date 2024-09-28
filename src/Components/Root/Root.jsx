@@ -4,8 +4,12 @@ import Sidebar from "../Sidebar/Sidebar";
 const Root = () => {
     return (
         <div className="flex">
-            <Sidebar></Sidebar>
-            <Outlet></Outlet>
+            <div className="w-2/6">
+                <Sidebar></Sidebar>
+            </div>
+            <div className="w-full">
+                <Outlet></Outlet>
+            </div>
         </div>
     );
 };

@@ -113,7 +113,7 @@ const Sidebar = () => {
                     Upgrade to PRO
                 </Typography>
                 <Typography variant="small" className="font-normal opacity-80">
-                    Upgrade to Clearance PRO and get even more benefits,more easier, advanced features
+                    Upgrade to Clearance PRO and get even more benefits,more easier
                     and premium.
                 </Typography>
                 <div className="mt-4 flex gap-3">
