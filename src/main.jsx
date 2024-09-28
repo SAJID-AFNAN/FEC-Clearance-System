@@ -9,6 +9,11 @@ import Inbox from './Pages/Inbox/Inbox'
 import Profile from './Pages/Profile/Profile'
 import Settings from './Pages/Settings/Settings'
 import Apply from './Pages/Apply/Apply'
+import Cse from './Pages/Apply/CSE/Cse'
+import Eee from './Pages/Apply/EEE/Eee'
+import Civil from './Pages/Apply/Civil/Civil'
+import NonTech from './Pages/Apply/NonTech/NonTech'
+import Academic from './Pages/Apply/Academic/Academic'
 
 
 const router = createBrowserRouter([
@@ -39,6 +44,26 @@ const router = createBrowserRouter([
       {
         path: "/apply",
         element: <Apply></Apply>
+      },
+      {
+        path: "/cse",
+        element: <Cse></Cse>
+      },
+      {
+        path: "/eee",
+        element: <Eee></Eee>
+      },
+      {
+        path: "/civil",
+        element: <Civil></Civil>
+      },
+      {
+        path: "/ntech",
+        element: <NonTech></NonTech>
+      },
+      {
+        path: "/academic",
+        element: <Academic></Academic>
       }
     ]
   }
