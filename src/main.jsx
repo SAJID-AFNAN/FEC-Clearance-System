@@ -14,12 +14,14 @@ import Eee from './Pages/Apply/EEE/Eee'
 import Civil from './Pages/Apply/Civil/Civil'
 import NonTech from './Pages/Apply/NonTech/NonTech'
 import Academic from './Pages/Apply/Academic/Academic'
+import Error from './Pages/Error/Error'
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
