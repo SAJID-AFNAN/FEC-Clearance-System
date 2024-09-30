@@ -15,6 +15,7 @@ import Civil from './Pages/Apply/Civil/Civil'
 import NonTech from './Pages/Apply/NonTech/NonTech'
 import Academic from './Pages/Apply/Academic/Academic'
 import Error from './Pages/Error/Error'
+import Login from './Pages/Login/Login'
 
 
 const router = createBrowserRouter([
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
       {
         path: "/academic",
         element: <Academic></Academic>
+      },
+      {
+        path: "/login",
+        element: <Login></Login>
       }
     ]
   }
