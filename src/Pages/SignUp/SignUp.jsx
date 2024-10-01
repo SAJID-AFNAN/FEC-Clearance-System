@@ -11,9 +11,9 @@ const SignUp = () => {
         <section className="grid text-center h-screen items-center p-8">
             <div>
                 <Typography variant="h3" color="blue-gray" className="mb-2">
-                    Sign Up
+                    Create Account
                 </Typography>
-                <Typography className="mb-16 text-gray-600 font-normal text-[18px]">
+                <Typography className="mb-10 text-gray-600 font-normal text-[18px]">
                     Enter your Informaiton to Create Account
                 </Typography>
                 <form action="#" className="mx-auto max-w-[24rem] text-left">
@@ -23,7 +23,51 @@ const SignUp = () => {
                                 variant="small"
                                 className="mb-2 block font-medium text-gray-900"
                             >
-                                Your Email
+                                Name
+                            </Typography>
+                        </label>
+                        <Input
+                            id="name"
+                            color="gray"
+                            size="lg"
+                            type="text"
+                            name="name"
+                            placeholder="Name"
+                            className="w-full placeholder:opacity-100 focus:border-t-primary border-t-blue-gray-200"
+                            labelProps={{
+                                className: "hidden",
+                            }}
+                        />
+                    </div>
+                    <div className="mb-6">
+                        <label htmlFor="email">
+                            <Typography
+                                variant="small"
+                                className="mb-2 block font-medium text-gray-900"
+                            >
+                                Registration No.
+                            </Typography>
+                        </label>
+                        <Input
+                            id="registration"
+                            color="gray"
+                            size="lg"
+                            type="text"
+                            name="number"
+                            placeholder="name@mail.com"
+                            className="w-full placeholder:opacity-100 focus:border-t-primary border-t-blue-gray-200"
+                            labelProps={{
+                                className: "hidden",
+                            }}
+                        />
+                    </div>
+                    <div className="mb-6">
+                        <label htmlFor="email">
+                            <Typography
+                                variant="small"
+                                className="mb-2 block font-medium text-gray-900"
+                            >
+                                Email
                             </Typography>
                         </label>
                         <Input
@@ -67,60 +111,9 @@ const SignUp = () => {
                             }
                         />
                     </div>
-                    <div className="mb-6">
-                        <label htmlFor="password">
-                            <Typography
-                                variant="small"
-                                className="mb-2 block font-medium text-gray-900"
-                            >
-                               Confirm Password
-                            </Typography>
-                        </label>
-                        <Input
-                            size="lg"
-                            placeholder="********"
-                            labelProps={{
-                                className: "hidden",
-                            }}
-                            className="w-full placeholder:opacity-100 focus:border-t-primary border-t-blue-gray-200"
-                            type={passwordShown ? "text" : "password"}
-                            // icon={
-                            //     <i onClick={togglePasswordVisiblity}>
-                            //         {passwordShown ? (
-                            //             <EyeIcon className="h-5 w-5" />
-                            //         ) : (
-                            //             <EyeSlashIcon className="h-5 w-5" />
-                            //         )}
-                            //     </i>
-                            // }
-                        />
-                    </div>
+
                     <Button color="gray" size="lg" className="mt-6" fullWidth>
                         sign in
-                    </Button>
-                    <div className="!mt-4 flex justify-end">
-                        <Typography
-                            as="a"
-                            href="#"
-                            color="blue-gray"
-                            variant="small"
-                            className="font-medium"
-                        >
-                            Forgot password
-                        </Typography>
-                    </div>
-                    <Button
-                        variant="outlined"
-                        size="lg"
-                        className="mt-6 flex h-12 items-center justify-center gap-2"
-                        fullWidth
-                    >
-                        <img
-                            src={`https://www.material-tailwind.com/logos/logo-google.png`}
-                            alt="google"
-                            className="h-6 w-6"
-                        />{" "}
-                        sign in with google
                     </Button>
                     <Typography
                         variant="small"

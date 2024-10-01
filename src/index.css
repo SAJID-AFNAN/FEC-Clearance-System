@@ -8,7 +8,7 @@
 
 body {
     background: #dde6ed;
-    padding: 15px;
+    /* padding: 15px; */
 }
 
 @tailwind base;

@@ -3,7 +3,7 @@ import Sidebar from "../Sidebar/Sidebar";
 
 const Root = () => {
     return (
-        <div className="flex">
+        <div className="flex p-4">
             <div className="w-2/6">
                 <Sidebar></Sidebar>
             </div>

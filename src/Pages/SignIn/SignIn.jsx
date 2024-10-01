@@ -8,12 +8,12 @@ const SignIn = () => {
     const togglePasswordVisiblity = () => setPasswordShown((cur) => !cur);
 
     return (
-        <section className="grid text-center h-screen items-center p-8">
+        <section className="grid text-center h-screen items-center">
             <div>
                 <Typography variant="h3" color="blue-gray" className="mb-2">
                     Sign In
                 </Typography>
-                <Typography className="mb-16 text-gray-600 font-normal text-[18px]">
+                <Typography className="mb-10 text-gray-600 font-normal text-[18px]">
                     Enter your email and password to sign in
                 </Typography>
                 <form action="#" className="mx-auto max-w-[24rem] text-left">
@@ -68,9 +68,9 @@ const SignIn = () => {
                         />
                     </div>
                     <Button color="gray" size="lg" className="mt-6" fullWidth>
-                        sign in
+                        Sign In
                     </Button>
-                    <div className="!mt-4 flex justify-end">
+                    <div className="!mt-4 flex justify-center">
                         <Typography
                             as="a"
                             href="#"
@@ -81,19 +81,6 @@ const SignIn = () => {
                             Forgot password
                         </Typography>
                     </div>
-                    <Button
-                        variant="outlined"
-                        size="lg"
-                        className="mt-6 flex h-12 items-center justify-center gap-2"
-                        fullWidth
-                    >
-                        <img
-                            src={`https://www.material-tailwind.com/logos/logo-google.png`}
-                            alt="google"
-                            className="h-6 w-6"
-                        />{" "}
-                        sign in with google
-                    </Button>
                     <Typography
                         variant="small"
                         color="gray"
@@ -103,6 +90,7 @@ const SignIn = () => {
                         <a href="signup" className="font-medium text-gray-900">
                             Create account
                         </a>
+
                     </Typography>
                 </form>
             </div>

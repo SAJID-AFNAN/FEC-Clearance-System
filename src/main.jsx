@@ -21,6 +21,14 @@ import SignUp from './Pages/SignUp/SignUp'
 
 const router = createBrowserRouter([
   {
+    path: "/signin",
+    element: <SignIn></SignIn>
+  },
+  {
+    path: "/signup",
+    element: <SignUp></SignUp>
+  },
+  {
     path: "/",
     element: <Root></Root>,
     errorElement: <Error></Error>,
@@ -68,14 +76,6 @@ const router = createBrowserRouter([
       {
         path: "/academic",
         element: <Academic></Academic>
-      },
-      {
-        path: "/signin",
-        element: <SignIn></SignIn>
-      },
-      {
-        path: "/signup",
-        element: <SignUp></SignUp>
       }
     ]
   }
