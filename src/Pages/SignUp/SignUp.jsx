@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import { Typography, Input, Button } from "@material-tailwind/react";
 import { EyeSlashIcon, EyeIcon } from "@heroicons/react/24/solid";
+import { NavLink } from "react-router-dom";
 
 const SignUp = () => {
     const [passwordShown, setPasswordShown] = useState(false);
@@ -121,9 +122,7 @@ const SignUp = () => {
                         className="!mt-4 text-center font-normal"
                     >
                         Already have an account?{" "}
-                        <a href="/signin" className="font-medium text-gray-900">
-                            Sign In
-                        </a>
+                        <NavLink to="/signin" className="font-medium text-gray-900">Sign In</NavLink>
                     </Typography>
                 </form>
             </div>

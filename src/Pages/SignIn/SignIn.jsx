@@ -1,7 +1,9 @@
 import { useState } from "react";
+import Marquee from "react-fast-marquee";
 
 import { Typography, Input, Button } from "@material-tailwind/react";
 import { EyeSlashIcon, EyeIcon } from "@heroicons/react/24/solid";
+import { NavLink } from "react-router-dom";
 
 const SignIn = () => {
     const [passwordShown, setPasswordShown] = useState(false);
@@ -10,6 +12,13 @@ const SignIn = () => {
     return (
         <section className="grid text-center h-screen items-center">
             <div>
+                <div className="flex w-3/5 mx-auto mb-16">
+                    <button className="bg-red-800 text-white px-5 py-3 rounded-md font-sans">Notice</button>
+                    <Marquee pauseOnHover={true} speed={170}>
+                        <span className="font-sans text-lg">I can be a React component, multiple React components, or just some text.
+                        </span>
+                    </Marquee>
+                </div>
                 <Typography variant="h3" color="blue-gray" className="mb-2">
                     Sign In
                 </Typography>
@@ -87,10 +96,7 @@ const SignIn = () => {
                         className="!mt-4 text-center font-normal"
                     >
                         Not registered?{" "}
-                        <a href="signup" className="font-medium text-gray-900">
-                            Create account
-                        </a>
-
+                        <NavLink to="/signup" className="font-medium text-gray-900">Create Account</NavLink>
                     </Typography>
                 </form>
             </div>
