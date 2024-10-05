@@ -1,8 +1,11 @@
 import { Typography, Button } from "@material-tailwind/react";
 import { FlagIcon } from "@heroicons/react/24/solid";
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Error = () => {
+    const { user } = useContext(AuthContext)
     return (
         <div className="h-screen mx-auto grid place-items-center text-center px-8">
             <div>
@@ -18,8 +21,10 @@ const Error = () => {
                     Don&apos;t worry, our team is already on it.Please try refreshing
                     the page or come back later.
                 </Typography>
-                <NavLink to="/"><Button color="gray" className="w-full px-4 md:w-[8rem]">
-                    back home
+                <NavLink to={user ? '/' : '/signin'}><Button color="gray" className="w-full px-4 md:w-[8rem]">
+                    {
+                        user ? 'Back Home' : 'SIGN IN'
+                    }
                 </Button></NavLink>
             </div>
         </div>

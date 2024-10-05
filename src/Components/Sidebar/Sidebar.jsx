@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
     Card,
     Typography,
@@ -24,10 +24,21 @@ import {
     CubeTransparentIcon,
     MagnifyingGlassIcon,
 } from "@heroicons/react/24/outline";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Sidebar = () => {
     const [openAlert, setOpenAlert] = React.useState(true);
+    const { logout } = useContext(AuthContext)
+    const navigate = useNavigate()
+
+    const handleLogout = () => {
+        logout()
+            .then(() => {
+                navigate('/signin')
+            })
+            .catch()
+    }
 
 
     return (
@@ -104,7 +115,7 @@ const Sidebar = () => {
                     <ListItemPrefix>
                         <PowerIcon className="h-5 w-5" />
                     </ListItemPrefix>
-                    Log Out
+                    <span onClick={handleLogout}>Log Out</span>
                 </ListItem>
             </List>
             <Alert open={openAlert} className="mt-auto" onClose={() => setOpenAlert(false)}>

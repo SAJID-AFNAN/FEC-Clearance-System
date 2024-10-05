@@ -17,7 +17,7 @@ import Academic from './Pages/Apply/Academic/Academic'
 import Error from './Pages/Error/Error'
 import SignIn from './Pages/SignIn/SignIn';
 import SignUp from './Pages/SignUp/SignUp'
-
+import AuthProvider from './Providers/AuthProvider'
 
 const router = createBrowserRouter([
   {
@@ -78,11 +78,17 @@ const router = createBrowserRouter([
         element: <Academic></Academic>
       }
     ]
+  },
+  {
+    path: "/error",
+    element: <Error></Error>
   }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <AuthProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </AuthProvider>
   </React.StrictMode>,
 )
