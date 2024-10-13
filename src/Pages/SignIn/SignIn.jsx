@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import Marquee from "react-fast-marquee";
 
 import { Typography, Input } from "@material-tailwind/react";
@@ -12,6 +12,7 @@ const SignIn = () => {
 
     const { signIn } = useContext(AuthContext)
     const navigate = useNavigate()
+    const emailRef = useRef(null)
 
     const handleSignIn = (e) => {
         e.preventDefault();
@@ -22,10 +23,15 @@ const SignIn = () => {
         console.log(email, password);
         signIn(email, password)
             .then(result => {
-
-                //navigate after
-                navigate('/')
                 console.log(result.user);
+
+                if (result.user.emailVerified) {
+                    //navigate after
+                    navigate('/')
+                }
+                else {
+                    alert("Please verify  your email address")
+                }
                 // alert('User login Successfully')
             })
             .catch(error => {
@@ -33,6 +39,20 @@ const SignIn = () => {
                 alert('Sorry! you are providing wrong information')
             })
     }
+
+    // const handleResetPassword = () => {
+    //     const email = emailRef.current.value
+    //     if (!email) {
+    //         console.log("Please Provide an email", emailRef.current.value);
+    //     }
+    //     resetPassword(email)
+    //         .then(() => {
+    //             alert('please check your email');
+    //         })
+    //         .catch(error => {
+    //             console.error(error);
+    //         })
+    // }
 
     return (
         <section className="grid text-center h-screen items-center">
@@ -61,6 +81,7 @@ const SignIn = () => {
                                 name="email"
                                 className="h-5 w-5"
                                 label="Email"
+                                ref={emailRef}
                             />
                         </div>
                         <div className="mb-6">
@@ -92,7 +113,8 @@ const SignIn = () => {
                                 variant="small"
                                 className="font-medium"
                             >
-                                <span className="hover:underline">Forgot password</span>
+                                <a href="#" className="link link-hover">Forgot password?</a>
+                                {/* <span onClick={handleResetPassword} className="hover:underline">Forgot password</span> */}
                             </Typography>
                         </div>
                         <Typography

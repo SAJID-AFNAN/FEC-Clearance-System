@@ -54,27 +54,27 @@ const Civil = () => {
     return (
         <div>
             <h1 className="text-center text-xl bg-indigo-200 p-4 rounded-lg text-black">Department of Civil Engineering</h1>
-            <div className="border-2 rounded-xl py-3 px-6  flex justify-between my-4">
+            <div className="border-b-2 border-blue-gray-200 py-3 px-6  flex justify-between my-4">
                 <p><span className="text-2xl font-semibold font-serif">Professor Dr. Md Mizanur Rahman</span> <br /> <span className="font-sans text-lg">Professor</span></p>
                 <Button onClick={handleRequest} className="btn hover:text-black">{Request ? 'Request' : 'Pending...'}</Button>
             </div>
-            <div className="border-2 rounded-xl py-3 px-6  flex justify-between my-4">
+            <div className="border-b-2 border-blue-gray-200 py-3 px-6  flex justify-between my-4">
                 <p><span className="text-2xl font-semibold font-serif">Raihan Khan Opu</span> <br /> <span className="font-sans text-lg">Assistant Teacher and Head of Department</span></p>
                 <Button onClick={handleRequest} className="btn hover:text-black">{Request ? 'Request' : 'Pending...'}</Button>
             </div>
-            <div className="border-2  rounded-xl py-3 px-6  flex justify-between my-4">
+            <div className="border-b-2 border-blue-gray-200 py-3 px-6  flex justify-between my-4">
                 <p><span className="text-2xl font-semibold font-serif">Md Akhlas Uddin</span> <br /> <span className="font-sans text-lg">Lecturer</span></p>
                 <Button onClick={handleRequest} className="btn hover:text-black">{Request ? 'Request' : 'Pending...'}</Button>
             </div>
-            <div className="border-2  rounded-xl py-3 px-6  flex justify-between my-4">
+            <div className="border-b-2 border-blue-gray-200 py-3 px-6  flex justify-between my-4">
                 <p><span className="text-2xl font-semibold font-serif">Sohanur Rahman</span> <br /> <span className="font-sans text-lg">Lecturer</span></p>
                 <Button onClick={handleRequest} className="btn hover:text-black">{Request ? 'Request' : 'Pending...'}</Button>
             </div>
-            <div className="border-2  rounded-xl py-3 px-6  flex justify-between my-4">
+            <div className="border-b-2 border-blue-gray-200 py-3 px-6  flex justify-between my-4">
                 <p><span className="text-2xl font-semibold font-serif">Shahed Mahmud</span> <br /> <span className="font-sans text-lg">Workshop/Laboratory Incharge</span></p>
                 <Button onClick={handleRequest} className="btn hover:text-black">{Request ? 'Request' : 'Pending...'}</Button>
             </div>
-            <div className="border-2  rounded-xl py-3 px-6  flex justify-between my-4">
+            <div className="border-b-2 border-blue-gray-200 py-3 px-6  flex justify-between my-4">
                 <p><span className="text-2xl font-semibold font-serif">Puja Brommo</span> <br /> <span className="font-sans text-lg">Guest Lecturer</span></p>
                 <Button onClick={handleRequest} className="btn hover:text-black">{Request ? 'Request' : 'Pending...'}</Button>
             </div>

@@ -8,7 +8,7 @@ const Root = () => {
     const { user, loading } = useContext(AuthContext)
 
     if (loading) {
-        return <Spinner className="h-16 w-16 text-gray-900/50" />;
+        return <Spinner className="h-16 w-16 text-gray-900/50" />
     }
     return (
         <div className="flex p-4">

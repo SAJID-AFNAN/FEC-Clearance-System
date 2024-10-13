@@ -3,7 +3,7 @@ const Profile = () => {
         <div>
             <input className="text-center" type="file" name="" id="" />
             <div className=" border border-black ">
-                <img className="w-[14%] mx-auto rounded-full mb-8" src="/src/assets/Images/Logo.jpg" alt="Photo" />
+                <img className="w-[14%] mx-auto rounded-full mb-8" src="./src/assets/Images/Logo.jpg" alt="Photo" />
             </div>
             <div className="flex justify-between mb-5 text-lg">
                 <div className=" border-black w-full">

@@ -20,7 +20,6 @@ import {
     PowerIcon,
 } from "@heroicons/react/24/solid";
 import {
-    ChevronDownIcon,
     CubeTransparentIcon,
     MagnifyingGlassIcon,
 } from "@heroicons/react/24/outline";
@@ -53,69 +52,63 @@ const Sidebar = () => {
                 <Input icon={<MagnifyingGlassIcon className="h-5 w-5" />} label="Search" />
             </div>
             <List>
-                <Accordion
-                    open={open === 1}
-                    icon={
-                        <ChevronDownIcon
-                            strokeWidth={2.5}
-                            className={`mx-auto h-4 w-4 transition-transform ${open === 1 ? "rotate-180" : ""}`}
-                        />
-                    }
-                >
-                    <ListItem className="border-b-0 p-3" selected={open === 1}>
-                        <ListItemPrefix>
-                            <PresentationChartBarIcon className="h-5 w-5" />
-                        </ListItemPrefix>
-                        <Typography color="blue-gray" className="mr-auto font-normal">
-                            <NavLink to="/dashboard">Dashboard</NavLink>
-                        </Typography>
-                    </ListItem>
+                <Accordion>
+                    <NavLink to="/dashboard">
+                        <ListItem className="border-b-0 p-3" selected={open === 1}>
+                            <ListItemPrefix>
+                                <PresentationChartBarIcon className="h-5 w-5" />
+                            </ListItemPrefix>
+                            <Typography color="blue-gray" className="mr-auto font-normal">
+                                Dashboard
+                            </Typography>
+                        </ListItem>
+                    </NavLink>
                 </Accordion>
-                <Accordion
-                    open={open === 2}
-                    icon={
-                        <ChevronDownIcon
-                            strokeWidth={2.5}
-                            className={`mx-auto h-4 w-4 transition-transform ${open === 2 ? "rotate-180" : ""}`}
-                        />
-                    }
-                >
-                    <ListItem className="p-3 border-b-0" selected={open === 2}>
-                        <ListItemPrefix>
-                            <ShoppingBagIcon className="h-5 w-5" />
-                        </ListItemPrefix>
-                        <Typography color="blue-gray" className="mr-auto font-normal">
-                            <NavLink to="/apply">Apply</NavLink>
-                        </Typography>
-                    </ListItem>
+                <Accordion>
+                    <NavLink to="/apply">
+                        <ListItem className="p-3 border-b-0" selected={open === 2}>
+                            <ListItemPrefix>
+                                <ShoppingBagIcon className="h-5 w-5" />
+                            </ListItemPrefix>
+                            <Typography color="blue-gray" className="mr-auto font-normal">
+                                Apply
+                            </Typography>
+                        </ListItem>
+                    </NavLink>
                 </Accordion>
                 <hr className="my-2 border-blue-gray-50" />
-                <ListItem>
-                    <ListItemPrefix>
-                        <InboxIcon className="h-5 w-5" />
-                    </ListItemPrefix>
-                    <NavLink to="/inbox">Inbox</NavLink>
-                    <ListItemSuffix>
-                        <Chip value="14" size="sm" variant="ghost" color="blue-gray" className="rounded-full" />
-                    </ListItemSuffix>
-                </ListItem>
-                <ListItem>
-                    <ListItemPrefix>
-                        <UserCircleIcon className="h-5 w-5" />
-                    </ListItemPrefix>
-                    <NavLink to="/profile">Profile</NavLink>
-                </ListItem>
-                <ListItem>
-                    <ListItemPrefix>
-                        <Cog6ToothIcon className="h-5 w-5" />
-                    </ListItemPrefix>
-                    <NavLink to="/settings">Settings</NavLink>
-                </ListItem>
-                <ListItem>
+                <NavLink to="/inbox">
+                    <ListItem>
+                        <ListItemPrefix>
+                            <InboxIcon className="h-5 w-5" />
+                        </ListItemPrefix>
+                        Inbox
+                        <ListItemSuffix>
+                            <Chip value="14" size="sm" variant="ghost" color="blue-gray" className="rounded-full" />
+                        </ListItemSuffix>
+                    </ListItem>
+                </NavLink>
+                <NavLink to="/profile">
+                    <ListItem>
+                        <ListItemPrefix>
+                            <UserCircleIcon className="h-5 w-5" />
+                        </ListItemPrefix>
+                        Profile
+                    </ListItem>
+                </NavLink>
+                <NavLink to="/settings">
+                    <ListItem>
+                        <ListItemPrefix>
+                            <Cog6ToothIcon className="h-5 w-5" />
+                        </ListItemPrefix>
+                        Settings
+                    </ListItem>
+                </NavLink>
+                <ListItem onClick={handleLogout}>
                     <ListItemPrefix>
                         <PowerIcon className="h-5 w-5" />
                     </ListItemPrefix>
-                    <span onClick={handleLogout}>Log Out</span>
+                    Log Out
                 </ListItem>
             </List>
             <Alert open={openAlert} className="mt-auto" onClose={() => setOpenAlert(false)}>
