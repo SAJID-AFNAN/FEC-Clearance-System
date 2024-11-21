@@ -1,8 +1,8 @@
 
 const Inbox = () => {
     return (
-        <div>
-            Personal inbox
+        <div className="text-7xl text-center pt-72 text-blue-gray-300 font-sans ">
+            Coming Soon...
         </div>
     );
 };

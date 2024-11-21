@@ -3,10 +3,8 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Root from './Components/Root/Root'
-import Home from './Pages/Home/Home'
 import Dashboard from './Pages/Dashboard/Dashboard'
 import Inbox from './Pages/Inbox/Inbox'
-import Profile from './Pages/Profile/Profile'
 import Settings from './Pages/Settings/Settings'
 import Apply from './Pages/Apply/Apply'
 import Cse from './Pages/Apply/CSE/Cse'
@@ -18,6 +16,8 @@ import Error from './Pages/Error/Error'
 import SignIn from './Pages/SignIn/SignIn';
 import SignUp from './Pages/SignUp/SignUp'
 import AuthProvider from './Providers/AuthProvider'
+import UpdateProfile from './Pages/UpdateProfile/UpdateProfile'
+import Profile from './Pages/Profile/Profile'
 
 const router = createBrowserRouter([
   {
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
+        element: <Apply></Apply>
       },
       {
         path: "/dashboard",
@@ -52,10 +52,6 @@ const router = createBrowserRouter([
       {
         path: "/settings",
         element: <Settings></Settings>
-      },
-      {
-        path: "/apply",
-        element: <Apply></Apply>
       },
       {
         path: "/cse",
@@ -76,6 +72,10 @@ const router = createBrowserRouter([
       {
         path: "/academic",
         element: <Academic></Academic>
+      },
+      {
+        path: "/update-profile",
+        element: <UpdateProfile></UpdateProfile>
       }
     ]
   },

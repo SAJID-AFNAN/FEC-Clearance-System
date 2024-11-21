@@ -10,10 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@heroicons/react": "^2.1.5",
     "@material-tailwind/react": "^2.1.10",
     "date-fns": "^4.1.0",
+    "express": "^4.21.1",
     "firebase": "^10.14.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
@@ -39,5 +41,10 @@
     "postcss": "^8.4.39",
     "tailwindcss": "^3.4.4",
     "vite": "^5.3.1"
-  }
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "postcss.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

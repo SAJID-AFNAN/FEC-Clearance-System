@@ -10,15 +10,16 @@ const SignUp = () => {
     const [passwordShown, setPasswordShown] = useState(false);
     const togglePasswordVisiblity = () => setPasswordShown((cur) => !cur);
 
-    const { createUser } = useContext(AuthContext)
+    const { createUser,updateUser } = useContext(AuthContext)
 
     const handleRegister = (e) => {
         e.preventDefault()
         const form = new FormData(e.currentTarget)
-        console.log(e.currentTarget);
+        const name = form.get('name')
         const email = form.get('email')
         const password = form.get('password')
-        console.log(email, password);
+
+        const user = {name,email}
 
 
         if (password.length < 6) {
@@ -29,11 +30,23 @@ const SignUp = () => {
         //create user
         createUser(email, password)
             .then(result => {
-                console.log(result.user);
-                alert('User Created Successfully')
-
+                //update user
+                updateUser(name)
+                .then(()=>{
+                    fetch("http://localhost:3000/students",{
+                        method: "POST",
+                        headers:{
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(user)
+                    })
+                    alert('User Created Successfully')
+                })
+                .catch(()=>{
+                    alert("Failed to add user name")
+                })
                 //send verification 
-                sendEmailVerification(result.user)
+                 sendEmailVerification(result.user)
                     .then(() => {
                         alert("Please check your email and verify")
                     })

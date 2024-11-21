@@ -1,31 +1,20 @@
-import { Button } from "@material-tailwind/react";
+import Request from "../../../Components/Request/Request";
 
 const Eee = () => {
     return (
         <div>
-            <h1 className="text-center text-xl bg-cyan-400 p-4 rounded-lg text-black">Department of Electrical and Electronics Engineering</h1>
-            <div className="border-b-2 border-blue-gray-200 py-3 px-6  flex justify-between my-4">
-                <p><span className="text-2xl font-semibold font-serif">Sanwar Hosen</span> <br /> <span className="font-sans text-lg">Assistant Teacher and Head of Department</span></p>
-                <Button className="btn hover:text-black">Request</Button>
-            </div>
-            <div className="border-b-2 border-blue-gray-200 py-3 px-6  flex justify-between my-4">
-                <p><span className="text-2xl font-semibold font-serif">Md Zillur Rahman</span> <br /> <span className="font-sans text-lg">Lecturer</span></p>
-                <Button className="btn hover:text-black">Request</Button>
-            </div>
-            <div className="border-b-2 border-blue-gray-200 py-3 px-6  flex justify-between my-4">
-                <p><span className="text-2xl font-semibold font-serif">Partho Mandol</span> <br /> <span className="font-sans text-lg">Lecturer</span></p>
-                <Button className="btn hover:text-black">Request</Button>
-            </div>
-            <div className="border-b-2 border-blue-gray-200 py-3 px-6  flex justify-between my-4">
-                <p><span className="text-2xl font-semibold font-serif">Apurbo Biswas</span> <br /> <span className="font-sans text-lg">Lecturer</span></p>
-                <Button className="btn hover:text-black">Request</Button>
-            </div>
-            <div className="border-b-2 border-blue-gray-200 py-3 px-6  flex justify-between my-4">
-                <p><span className="text-2xl font-semibold font-serif">Md Fahad Hosen</span> <br /> <span className="font-sans text-lg">Guest Lecturer</span></p>
-                <Button className="btn hover:text-black">Request</Button>
-            </div>
+            <h1 className="text-center text-xl bg-indigo-200 p-4 rounded-lg text-black">Department of Electrical and Electronics Engineering</h1>
+            {TeacherDetails.map((teacher) => <Request key={teacher.id} data={teacher} />)}
         </div>
     );
 };
+
+const TeacherDetails = [
+    { id: 1, name: "Sanwar Hosen", title: "Assistant Teacher and Head of Department", email: "sajidafnan91@gmail.com" },
+    { id: 2, name: "Md Zillur Rahman", title: "Lecturer", email: "sajidafnan91@gmail.com" },
+    { id: 3, name: "Partho Mandol", title: "Lecturer", email: "sajidafnan91@gmail.com" },
+    { id: 4, name: "Apurbo Biswas", title: "Lecturer", email: "sajidafnan91@gmail.com" },
+    { id: 5, name: "Md Fahad Hosen", title: "Guest Lecturer", email: "sajidafnan91@gmail.com" }
+]
 
 export default Eee;

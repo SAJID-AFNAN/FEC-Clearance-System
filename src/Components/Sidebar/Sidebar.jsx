@@ -25,6 +25,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import logo from '../../assets/Images/Logo.jpg'
 
 const Sidebar = () => {
     const [openAlert, setOpenAlert] = React.useState(true);
@@ -43,7 +44,7 @@ const Sidebar = () => {
     return (
         <Card className="h-[calc(100vh-2rem)] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5">
             <div className="mb-2 flex items-center gap-4 p-4">
-                <img src="/src/assets/Images/Logo.jpg" alt="brand" className="h-8 w-8" />
+                <img src={logo} alt="brand" className="h-8 w-8" />
                 <Typography variant="h5" color="blue-gray">
                     FEC Clearance
                 </Typography>
@@ -53,25 +54,25 @@ const Sidebar = () => {
             </div>
             <List>
                 <Accordion>
-                    <NavLink to="/dashboard">
-                        <ListItem className="border-b-0 p-3" selected={open === 1}>
-                            <ListItemPrefix>
-                                <PresentationChartBarIcon className="h-5 w-5" />
-                            </ListItemPrefix>
-                            <Typography color="blue-gray" className="mr-auto font-normal">
-                                Dashboard
-                            </Typography>
-                        </ListItem>
-                    </NavLink>
-                </Accordion>
-                <Accordion>
-                    <NavLink to="/apply">
-                        <ListItem className="p-3 border-b-0" selected={open === 2}>
+                    <NavLink to="/">
+                        <ListItem className="p-3 border-b-0">
                             <ListItemPrefix>
                                 <ShoppingBagIcon className="h-5 w-5" />
                             </ListItemPrefix>
                             <Typography color="blue-gray" className="mr-auto font-normal">
                                 Apply
+                            </Typography>
+                        </ListItem>
+                    </NavLink>
+                </Accordion>
+                <Accordion>
+                    <NavLink to="/dashboard">
+                        <ListItem className="border-b-0 p-3">
+                            <ListItemPrefix>
+                                <PresentationChartBarIcon className="h-5 w-5" />
+                            </ListItemPrefix>
+                            <Typography color="blue-gray" className="mr-auto font-normal">
+                                Dashboard
                             </Typography>
                         </ListItem>
                     </NavLink>

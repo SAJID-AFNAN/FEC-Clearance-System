@@ -1,97 +1,74 @@
+import { NavLink } from "react-router-dom";
+import photo from "../../assets/Images/WhatsApp Image 2024-11-17 at 7.49.37 PM.jpeg"
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+
+
 const Profile = () => {
-    return (
-        <div>
-            <input className="text-center" type="file" name="" id="" />
-            <div className=" border border-black ">
-                <img className="w-[14%] mx-auto rounded-full mb-8" src="./src/assets/Images/Logo.jpg" alt="Photo" />
-            </div>
-            <div className="flex justify-between mb-5 text-lg">
-                <div className=" border-black w-full">
-                    <label className="font-medium" htmlFor="Reg No.">Reg No. </label>
-                    <input className="px-4 py-2 rounded-lg bg-[#e7ebed]" type="text" name="number" id="" />
-                </div>
-                <div className=" border-black w-full">
-                    <label className="font-medium" htmlFor="name">Name </label>
-                    <input className="px-4 py-2 rounded-lg w-3/4 bg-[#e7ebed]" type="text" name="name" id="" />
-                </div>
-            </div>
-            <div className="flex justify-between mb-5 text-lg">
-                <div className=" border-black w-full">
-                    <label className="font-medium" htmlFor="father-name">Father Name </label>
-                    <input className="px-4 py-2 rounded-lg w-2/3 bg-[#e7ebed]" type="text" name="father-name" id="" />
-                </div>
-                <div className=" border-black w-full">
-                    <label className="font-medium" htmlFor="mother-name">Mother Name </label>
-                    <input className="px-4 py-2 rounded-lg w-2/3 bg-[#e7ebed]" type="text" name="mother-name" id="" />
-                </div>
-            </div>
-            <div className="flex justify-between mb-5 text-lg">
-                <div className=" border-black w-full">
-                    <label className="font-medium" htmlFor="DOB">DOB </label>
-                    <input className="px-4 py-2 rounded-lg w-3/4 bg-[#e7ebed]" type="date" name="dob" id="" />
-                </div>
-                <div className=" border-black w-full text-center">
-                    <label className="font-medium" htmlFor="gender">Gender </label>
-                    <select className="px-4 py-2 rounded-lg w-2/3 bg-[#e7ebed] ">
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                    </select>
-                </div>
-                <div className=" border-black w-full">
-                    <label className="font-medium" htmlFor="nationality">Nationality </label>
-                    <input className="px-4 py-2 rounded-lg bg-[#e7ebed]" type="text" name="number" id="" />
-                </div>
-            </div>
-            <div className="flex justify-between mb-5 text-lg">
-                <div className=" border-black w-full">
-                    <label className="font-medium" htmlFor="program">Program </label>
-                    <select className="px-4 py-2 rounded-lg bg-[#e7ebed] ">
-                        <option value="cse">Computer Science and Engineering</option>
-                        <option value="eee">Electrical and Electronics Engineering</option>
-                        <option value="civil">Civil Engineering</option>
-                    </select>
-                </div>
-                <div className=" border-black w-[50%] text-center">
-                    <label className="font-medium" htmlFor="session">Session </label>
-                    <select className="px-4 py-2 rounded-lg bg-[#e7ebed] ">
-                        <option value="session">2015-16</option>
-                        <option value="session">2016-17</option>
-                        <option value="session">2017-18</option>
-                        <option value="session">2018-19</option>
-                        <option value="session">2019-20</option>
-                    </select>
-                </div>
-                <div className=" border-black w-[35%] text-center">
-                    <label className="font-medium" htmlFor="batch">Batch </label>
-                    <select className="px-4 py-2 rounded-lg bg-[#e7ebed] ">
-                        <option value="session">03</option>
-                        <option value="session">04</option>
-                        <option value="session">05</option>
-                        <option value="session">06</option>
-                        <option value="session">07</option>
-                    </select>
-                </div>
+  const [userData,setUserData] = useState({})
+  const {user} = useContext(AuthContext)
 
-            </div>
-            <div className="flex justify-between mb-5 text-lg">
-                <div className=" border-black w-full">
-                    <label className="font-medium" htmlFor="religion">Religion </label>
-                    <input className="px-4 py-2 rounded-lg bg-[#e7ebed]" type="text" name="religion" id="" />
-                </div>
-                <div className=" border-black w-full">
-                    <label className="font-medium" htmlFor="phone">Phone </label>
-                    <input className="px-4 py-2 rounded-lg w-3/4 bg-[#e7ebed]" type="text" name="phone" id="" />
-                </div>
-            </div>
-            <div className="mb-2 text-lg">
-                <div className=" border-black w-full">
-                    <label className="font-medium" htmlFor="email">Email </label>
-                    <input className="px-4 py-2 rounded-lg w-3/4 bg-[#e7ebed]" type="text" name="email" id="" />
-                </div>
-            </div>
+  useEffect(()=>{
+    fetch(`http://localhost:3000/student/${user?.email}`)
+    .then(res=>res.json())
+    .then(data=>setUserData(data))
+  },[])
 
+  const noData = <span className="text-gray-600">None</span>
+
+  return (
+    <div>
+      <div className=" bg-blue-gray-50 shadow-md rounded-lg p-6 mx-auto">
+        <div className="text-center mb-4">
+          <img src={photo || "https://via.placeholder.com/100"} alt="Student Avatar" className="rounded-full mx-auto w-32 h-32" />
         </div>
-    );
+        <div className="profile-details space-y-6">
+          <div className="flex justify-between">
+            <span className="font-medium text-gray-700 ">Name:</span>
+            <span className="text-gray-600">{user?.displayName}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="font-medium text-gray-700">Registration No:</span>
+            {userData?.reg?<span className="text-gray-600">{userData?.reg}</span>:noData}
+          </div>
+          <div className="flex justify-between">
+            <span className="font-medium text-gray-700">Father&apos;s Name:</span>
+            {userData?.fatherName?<span className="text-gray-600">{userData?.fatherName}</span>:noData}
+          </div>
+          <div className="flex justify-between">
+            <span className="font-medium text-gray-700">Mother&apos;s Name:</span>
+            {userData?.motherName?<span className="text-gray-600">{userData?.motherName}</span>:noData}
+          </div>
+          <div className="flex justify-between">
+            <span className="font-medium text-gray-700">Phone:</span>
+            {userData?.phone?<span className="text-gray-600">{userData?.phone}</span>:noData}
+          </div>
+          <div className="flex justify-between">
+            <span className="font-medium text-gray-700">Email:</span>
+            <span className="text-gray-600">{user?.email}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="font-medium text-gray-700">Department:</span>
+            {userData?.dept?<span className="text-gray-600">{userData?.dept}</span>:noData}
+          </div>
+          <div className="flex justify-between">
+            <span className="font-medium text-gray-700">Batch:</span>
+            {userData?.batch?<span className="text-gray-600">{userData?.batch}</span>:noData}
+          </div>
+          <div className="flex justify-between">
+            <span className="font-medium text-gray-700">Session:</span>
+            {userData?.session?<span className="text-gray-600">{userData?.session}</span>:noData}
+          </div>
+        </div>
+      </div>
+      <div className="text-center mt-6">
+        <NavLink to="/update-profile">
+          {/* <button className="btn px-12 text-lg bg-black text-white hover:text-black">Update</button> */}
+          <button className="btn text-gray-50 bg-blue-gray-700 px-12 hover:bg-[#194f54]">UPDATE</button>
+        </NavLink>
+      </div>
+    </div>
+  );
 };
 
 export default Profile;

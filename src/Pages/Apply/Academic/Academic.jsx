@@ -1,26 +1,17 @@
-import { Button } from "@material-tailwind/react";
+import Request from "../../../Components/Request/Request";
 const Academic = () => {
     return (
         <div>
-            <h1 className="text-center text-xl bg-purple-200 p-4 rounded-lg text-black">Academic</h1>
-            <div className="border-b-2 border-blue-gray-200 py-3 px-6  flex justify-between my-4">
-                <p><span className="text-2xl font-semibold font-serif">Md. Rakibul Islam</span> <br /> <span className="font-sans text-lg">Programmer</span></p>
-                <Button className="btn hover:text-black">Request</Button>
-            </div>
-            <div className="border-b-2 border-blue-gray-200 py-3 px-6  flex justify-between my-4">
-                <p><span className="text-2xl font-semibold font-serif">Md. Rafiqul Islam</span> <br /> <span className="font-sans text-lg">Librarian</span></p>
-                <Button className="btn hover:text-black">Request</Button>
-            </div>
-            <div className="border-b-2 border-blue-gray-200 py-3 px-6  flex justify-between items-center">
-                <p><span className="text-2xl font-semibold font-serif">Md. Eklachur Rahman</span> <br /> <span className="font-sans text-lg">Associate Professor (Chemistry) & Head of Department Non-Tech <br />Professor,South Hall</span></p>
-                <Button className="btn hover:text-black">Request</Button>
-            </div>
-            <div className="border-b-2 border-blue-gray-200 py-3 px-6  flex justify-between items-center my-4">
-                <p><span className="text-2xl font-semibold font-serif">Raihan Khan Opu</span> <br /> <span className="font-sans text-lg">Assistant Teacher and Head of Department <br />Professor, North Hall</span></p>
-                <Button className="btn hover:text-black">Request</Button>
-            </div>
+            <h1 className="text-center text-xl bg-indigo-200 p-4 rounded-lg text-black">Academic</h1>
+            {TeacherDetails.map((teacher) => <Request key={teacher.id} data={teacher} />)}
         </div>
     );
 };
+const TeacherDetails = [
+    { id: 1, name: "Md. Rakibul Islam", title: "Programmer", email: "sajidafnan91@gmail.com" },
+    { id: 2, name: "Md. Rafiqul Islam", title: "Librarian", email: "sajidafnan91@gmail.com" },
+    { id: 3, name: "Md. Eklachur Rahman", title: "Associate Professor (Chemistry) & Head of Department Non-Tech,Professor,South Hall", email: "sajidafnan91@gmail.com" },
+    { id: 4, name: "Raihan Khan Opu", title: "Assistant Teacher and Head of Department,Professor, North Hall", email: "sajidafnan91@gmail.com" }
+]
 
 export default Academic;
