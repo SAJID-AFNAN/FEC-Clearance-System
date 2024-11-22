@@ -1,6 +1,21 @@
 import { NavLink } from "react-router-dom";
 import photo from "../../assets/Images/WhatsApp Image 2024-11-17 at 7.49.37 PM.jpeg"
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+
+
 const Dashboard = () => {
+
+
+    const [userData, setUserData] = useState({})
+    const { user } = useContext(AuthContext)
+
+    useEffect(() => {
+        fetch(`https://fec-clearence-server.vercel.app/student/${user?.email}`)
+            .then(res => res.json())
+            .then(data => setUserData(data))
+    }, [])
+
     return (
         <div>
             <div className="flex gap-6 mb-6">
@@ -14,7 +29,7 @@ const Dashboard = () => {
                                 <img
                                     src={photo}
                                     alt="Profile"
-                                    className="w-32 h-32 rounded-full object-cover border-4 border-blue-500"
+                                    className="w-28 h-28 rounded-full object-cover border-4 border-blue-500"
                                 />
                                 {/* Floating Dots */}
                                 <div className="absolute top-0 left-0 h-3 w-3 bg-red-500 rounded-full animate-bounce-custom"></div>
@@ -25,8 +40,8 @@ const Dashboard = () => {
 
                             {/* Text */}
                             <div className="mt-4 text-center">
-                                <h2 className="text-xl font-semibold text-black">Sajid Afnan</h2>
-                                <p className="text-sm text-black ">2020-21</p>
+                                {userData?.name ? <h2 className="text-xl font-semibold text-black">{userData?.name}</h2> : <h2 className="text-xl font-semibold text-black">{user?.displayName}</h2>}
+                                {userData?.session ? <p className="text-sm text-black ">{userData?.session}</p> : <p className="text-sm text-black ">session: --</p>}
                                 <NavLink to="/profile">
                                     <button className="bg-blue-gray-900 h-8 px-4 rounded-md mt-2">Details</button>
                                 </NavLink>
@@ -36,7 +51,11 @@ const Dashboard = () => {
                 </div>
             </div>
             <div className="bg-gray-300 rounded-2xl h-96">
-                <p className="text-center text-7xl text-brown-200 p-36">No Notification</p>
+                {/* <p className="text-center text-7xl text-brown-200 p-36">No Notification</p> */}
+                <div className="border-b-2 border-blue-gray-200 py-3 px-6  flex justify-between my-4">
+                    <p><span className="text-2xl font-semibold font-serif">Samsul Islam</span> <br /> <span className="font-sans text-lg">Assistant professor</span></p>
+                    <p className="px-8 py-4 text-lg">Request Pending....</p>
+                </div>
             </div>
 
         </div>

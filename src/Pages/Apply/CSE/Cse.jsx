@@ -9,11 +9,11 @@ const Cse = () => {
     );
 };
 const TeacherDetails = [
-    { id: 1, name: "Shamsul Islam", title: "Assistant Teacher and Head of Department", email: "sajidafnan91@gmail.com" },
-    { id: 2, name: "Md Tuhin Reza", title: "Lecturer", email: "sajidafnan91@gmail.com" },
-    { id: 3, name: "Md Rasel Ahmed", title: "Lecturer", email: "sajidafnan91@gmail.com" },
-    { id: 4, name: "Md Suman Reza", title: "Lecturer", email: "sajidafnan91@gmail.com" },
-    { id: 5, name: "Samia Akter", title: "Lecturer", email: "sajidafnan91@gmail.com" },
-    { id: 6, name: "Md Rany Ahmed", title: "Guest Lecturer", email: "sajidafnan91@gmail.com" }
+    { id: 11, name: "Shamsul Islam", title: "Assistant Teacher and Head of Department", email: "sajidafnan91@gmail.com" },
+    { id: 12, name: "Md Tuhin Reza", title: "Lecturer", email: "sajidafnan91@gmail.com" },
+    { id: 13, name: "Md Rasel Ahmed", title: "Lecturer", email: "sajidafnan91@gmail.com" },
+    { id: 14, name: "Md Suman Reza", title: "Lecturer", email: "sajidafnan91@gmail.com" },
+    { id: 15, name: "Samia Akter", title: "Lecturer", email: "sajidafnan91@gmail.com" },
+    { id: 16, name: "Md Rany Ahmed", title: "Guest Lecturer", email: "sajidafnan91@gmail.com" }
 ]
 export default Cse;

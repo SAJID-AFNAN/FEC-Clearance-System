@@ -12,11 +12,11 @@ const Civil = () => {
 };
 
 const TeacherDetails = [
-    { id: 1, name: "Professor Md. Alamgir Hossain", title: "Professor", email: "sajidafnan91@gmail.com" },
-    { id: 2, name: "Raihan Khan Opu", title: "Assistant Teacher and Head of Department", email: "sajidafnan91@gmail.com" },
-    { id: 3, name: "Md Akhlas Uddin", title: "Lecturer", email: "sajidafnan91@gmail.com" },
-    { id: 4, name: "Sohanur Rahman", title: "Lecturer", email: "sajidafnan91@gmail.com" },
-    { id: 5, name: "Shahed Mahmud", title: "Workshop/Laboratory Incharge", email: "sajidafnan91@gmail.com" },
-    { id: 6, name: "Puja Brommo", title: "Guest Lecturer", email: "sajidafnan91@gmail.com" }
+    { id: 5, name: "Professor Md. Alamgir Hossain", title: "Professor", email: "sajidafnan91@gmail.com" },
+    { id: 6, name: "Raihan Khan Opu", title: "Assistant Teacher and Head of Department", email: "sajidafnan91@gmail.com" },
+    { id: 7, name: "Md Akhlas Uddin", title: "Lecturer", email: "sajidafnan91@gmail.com" },
+    { id: 8, name: "Sohanur Rahman", title: "Lecturer", email: "sajidafnan91@gmail.com" },
+    { id: 9, name: "Shahed Mahmud", title: "Workshop/Laboratory Incharge", email: "sajidafnan91@gmail.com" },
+    { id: 10, name: "Puja Brommo", title: "Guest Lecturer", email: "sajidafnan91@gmail.com" }
 ]
 export default Civil;

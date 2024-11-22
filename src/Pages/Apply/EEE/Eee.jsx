@@ -10,11 +10,11 @@ const Eee = () => {
 };
 
 const TeacherDetails = [
-    { id: 1, name: "Sanwar Hosen", title: "Assistant Teacher and Head of Department", email: "sajidafnan91@gmail.com" },
-    { id: 2, name: "Md Zillur Rahman", title: "Lecturer", email: "sajidafnan91@gmail.com" },
-    { id: 3, name: "Partho Mandol", title: "Lecturer", email: "sajidafnan91@gmail.com" },
-    { id: 4, name: "Apurbo Biswas", title: "Lecturer", email: "sajidafnan91@gmail.com" },
-    { id: 5, name: "Md Fahad Hosen", title: "Guest Lecturer", email: "sajidafnan91@gmail.com" }
+    { id: 17, name: "Sanwar Hosen", title: "Assistant Teacher and Head of Department", email: "sajidafnan91@gmail.com" },
+    { id: 18, name: "Md Zillur Rahman", title: "Lecturer", email: "sajidafnan91@gmail.com" },
+    { id: 19, name: "Partho Mandol", title: "Lecturer", email: "sajidafnan91@gmail.com" },
+    { id: 20, name: "Apurbo Biswas", title: "Lecturer", email: "sajidafnan91@gmail.com" },
+    { id: 21, name: "Md Fahad Hosen", title: "Guest Lecturer", email: "sajidafnan91@gmail.com" }
 ]
 
 export default Eee;

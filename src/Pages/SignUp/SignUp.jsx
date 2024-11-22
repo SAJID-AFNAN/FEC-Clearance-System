@@ -33,7 +33,7 @@ const SignUp = () => {
                 //update user
                 updateUser(name)
                 .then(()=>{
-                    fetch("http://localhost:3000/students",{
+                    fetch("https://fec-clearence-server.vercel.app/students",{
                         method: "POST",
                         headers:{
                             'Content-Type': 'application/json'

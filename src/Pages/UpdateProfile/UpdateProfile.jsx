@@ -8,6 +8,7 @@ const UpdateProfile = () => {
     const {user} = useContext(AuthContext);
     const navigate = useNavigate();
 
+
     // Handle input changes
     const handleInputChange = async(event) => {
         event.preventDefault();
@@ -24,7 +25,9 @@ const UpdateProfile = () => {
 
         const student = {name,email,phone,fatherName,motherName,reg,dept,batch,session}
 
-        fetch(`http://localhost:3000/student/update/${user?.email}`,{
+        console.log(student);
+
+        fetch(`https://fec-clearence-server.vercel.app/student/update/${user?.email}`,{
             method:"PUT",
             headers:{
                 'Content-Type': 'application/json'
@@ -33,7 +36,6 @@ const UpdateProfile = () => {
         })
         .then(resp=>resp.json())
         .then((result)=>{
-            console.log(result);
             if(result.upsertedCount>0 || result.modifiedCount>0){
                 alert("User updated")
                 navigate("/profile");

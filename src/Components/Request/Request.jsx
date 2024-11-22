@@ -6,13 +6,15 @@ import emailjs from '@emailjs/browser';
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { useNavigate } from "react-router-dom";
+import { saveJobApplication } from "../../Utility/LocalStorage"
 
 const Request = ({ data }) => {
     const [userData, setUserData] = useState({})
     const navigate = useNavigate();
 
+
     useEffect(() => {
-        fetch(`http://localhost:3000/student/${user?.email}`)
+        fetch(`https://fec-clearence-server.vercel.app/student/${user?.email}`)
             .then(res => res.json())
             .then(data => setUserData(data))
     }, [])
@@ -21,6 +23,8 @@ const Request = ({ data }) => {
     const { user } = useContext(AuthContext)
 
     const handleRequest = () => {
+
+
         var templateParams = {
             from_name: user?.name,
             notes: 'Check this out!',
@@ -39,10 +43,11 @@ const Request = ({ data }) => {
             })
                 .then((willDelete) => {
                     if (willDelete) {
-                        emailjs.send(import.meta.env.VITE_SERVICE_KEY,import.meta.env.VITE_TEMP_KEY,
+                        emailjs.send(import.meta.env.VITE_SERVICE_KEY, import.meta.env.VITE_TEMP_KEY,
                             templateParams, {
                             publicKey: import.meta.env.VITE_PUBLIC_KEY,
                             // privateKey: 'import.meta.env.VITE_PRIVATE_KEY',
+
                         }).then(
                             (response) => {
                                 console.log('SUCCESS!', response.status, response.text);
@@ -56,7 +61,7 @@ const Request = ({ data }) => {
                         );
                     }
                 });
-
+            saveJobApplication(data.id)
         } else {
             alert("Please fill up your info");
             navigate('/profile');
