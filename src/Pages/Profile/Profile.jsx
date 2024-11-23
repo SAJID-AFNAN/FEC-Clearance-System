@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import photo from "../../assets/Images/WhatsApp Image 2024-11-17 at 7.49.37 PM.jpeg"
+// import photo from "../../assets/Images/WhatsApp Image 2024-11-17 at 7.49.37 PM.jpeg"
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 
@@ -10,10 +10,12 @@ const Profile = () => {
   const {user} = useContext(AuthContext)
 
   useEffect(()=>{
-    fetch(`https://fec-clearence-server.vercel.app/student/${user?.email}`)
+    fetch(`https://fec-clearance-server.onrender.com/student/${user?.email}`)
     .then(res=>res.json())
     .then(data=>setUserData(data))
   },[])
+  
+  console.log(userData?.email);
 
   const noData = <span className="text-gray-600">None</span>
 
@@ -21,7 +23,7 @@ const Profile = () => {
     <div>
       <div className=" bg-blue-gray-50 shadow-md rounded-lg p-6 mx-auto">
         <div className="text-center mb-4">
-          <img src={photo || "https://via.placeholder.com/100"} alt="Student Avatar" className="rounded-full mx-auto object-cover w-32 h-32" />
+          <img src={userData?.photo || "https://via.placeholder.com/100"} alt="Student Avatar" className="rounded-full mx-auto object-cover w-32 h-32" />
         </div>
 
         <div className="profile-details space-y-6">

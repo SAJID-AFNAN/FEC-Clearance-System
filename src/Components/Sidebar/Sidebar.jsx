@@ -8,7 +8,6 @@ import {
     ListItemSuffix,
     Chip,
     Accordion,
-    Alert,
     Input,
 } from "@material-tailwind/react";
 import {
@@ -20,7 +19,6 @@ import {
     PowerIcon,
 } from "@heroicons/react/24/solid";
 import {
-    CubeTransparentIcon,
     MagnifyingGlassIcon,
 } from "@heroicons/react/24/outline";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -28,7 +26,6 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import logo from '../../assets/Images/Logo.jpg'
 
 const Sidebar = () => {
-    const [openAlert, setOpenAlert] = React.useState(true);
     const { logout } = useContext(AuthContext)
     const navigate = useNavigate()
 
@@ -83,7 +80,7 @@ const Sidebar = () => {
                         <ListItemPrefix>
                             <InboxIcon className="h-5 w-5" />
                         </ListItemPrefix>
-                        Inbox
+                        Message
                         <ListItemSuffix>
                             <Chip value="14" size="sm" variant="ghost" color="blue-gray" className="rounded-full" />
                         </ListItemSuffix>
@@ -102,7 +99,7 @@ const Sidebar = () => {
                         <ListItemPrefix>
                             <Cog6ToothIcon className="h-5 w-5" />
                         </ListItemPrefix>
-                        Settings
+                        Admin
                     </ListItem>
                 </NavLink>
                 <ListItem onClick={handleLogout}>
@@ -112,30 +109,7 @@ const Sidebar = () => {
                     Log Out
                 </ListItem>
             </List>
-            <Alert open={openAlert} className="mt-auto" onClose={() => setOpenAlert(false)}>
-                <CubeTransparentIcon className="mb-4 h-12 w-12" />
-                <Typography variant="h6" className="mb-1">
-                    Upgrade to PRO
-                </Typography>
-                <Typography variant="small" className="font-normal opacity-80">
-                    Upgrade to Clearance PRO and get even more benefits,more easier
-                    and premium.
-                </Typography>
-                <div className="mt-4 flex gap-3">
-                    <Typography
-                        as="a"
-                        href="#"
-                        variant="small"
-                        className="font-medium opacity-80"
-                        onClick={() => setOpenAlert(false)}
-                    >
-                        Dismiss
-                    </Typography>
-                    <Typography as="a" href="#" variant="small" className="font-medium">
-                        Upgrade Now
-                    </Typography>
-                </div>
-            </Alert>
+            
         </Card>
     );
 }

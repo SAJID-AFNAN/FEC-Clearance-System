@@ -10,11 +10,11 @@ const Eee = () => {
 };
 
 const TeacherDetails = [
-    { id: 17, name: "Sanwar Hosen", title: "Assistant Teacher and Head of Department", email: "sajidafnan91@gmail.com" },
-    { id: 18, name: "Md Zillur Rahman", title: "Lecturer", email: "sajidafnan91@gmail.com" },
-    { id: 19, name: "Partho Mandol", title: "Lecturer", email: "sajidafnan91@gmail.com" },
-    { id: 20, name: "Apurbo Biswas", title: "Lecturer", email: "sajidafnan91@gmail.com" },
-    { id: 21, name: "Md Fahad Hosen", title: "Guest Lecturer", email: "sajidafnan91@gmail.com" }
+    { id: 20, name: "Sanwar Hosen",status:"request", title: "Assistant Teacher and Head of Department", email: "sajidafnan91@gmail.com", image:"https://i.postimg.cc/0j1TLf0B/Sanwar-Sir.jpg" },
+    { id: 21, name: "Md Zillur Rahman",status:"request", title: "Lecturer", email: "sajidafnan91@gmail.com", image:"https://i.postimg.cc/FzbMmLPs/Zillur-Sir.jpg" },
+    { id: 22, name: "Partho Mandol",status:"request", title: "Lecturer", email: "sajidafnan91@gmail.com", image:"https://i.postimg.cc/65tscM37/Partho-Sir.jpg" },
+    { id: 23, name: "Apurbo Biswas",status:"request", title: "Lecturer", email: "sajidafnan91@gmail.com", image:"https://i.postimg.cc/T2mGCyJs/Opurbo-Sir.jpg" },
+    { id: 24, name: "Md Fahad Hosen",status:"request", title: "Guest Lecturer", email: "sajidafnan91@gmail.com", image:"https://i.postimg.cc/ZqMZDpQG/FahadSir.jpg" }
 ]
 
 export default Eee;

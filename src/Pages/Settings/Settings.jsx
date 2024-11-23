@@ -1,9 +1,9 @@
 
 const Settings = () => {
     return (
-        <div>
-            You Change your settings from here
-        </div>
+        <div className="text-7xl text-center pt-72 text-blue-gray-300 font-sans ">
+        Coming Soon...
+    </div>
     );
 };
 

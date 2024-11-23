@@ -2,15 +2,15 @@
 
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const UpdateProfile = () => {
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     const navigate = useNavigate();
 
 
     // Handle input changes
-    const handleInputChange = async(event) => {
+    const handleInputChange = async (event) => {
         event.preventDefault();
         const target = event.target;
         const email = user?.email;
@@ -22,33 +22,44 @@ const UpdateProfile = () => {
         const batch = target.batch.value;
         const session = target.session.value;
         const phone = target.phone.value;
+        const photo = target.photo.files[0];
 
-        const student = {name,email,phone,fatherName,motherName,reg,dept,batch,session}
+        // Convert photo to Base64 if needed
+        let photoURL = "";
+        if (photo) {
+            const reader = new FileReader();
+            reader.readAsDataURL(photo);
+            photoURL = await new Promise((resolve) => {
+                reader.onload = () => resolve(reader.result);
+            });
+        }
+
+        const student = { name, email, phone, fatherName, motherName, reg, dept, batch, session, photo: photoURL }
 
         console.log(student);
 
-        fetch(`https://fec-clearence-server.vercel.app/student/update/${user?.email}`,{
-            method:"PUT",
-            headers:{
+        fetch(`https://fec-clearance-server.onrender.com/student/update/${user?.email}`, {
+            method: "PUT",
+            headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(student)
         })
-        .then(resp=>resp.json())
-        .then((result)=>{
-            if(result.upsertedCount>0 || result.modifiedCount>0){
-                alert("User updated")
-                navigate("/profile");
-            }else{
-                alert("Data already updated")
-                navigate("/profile");
-            }
-        })
-        .catch(()=>{
-            alert("failed to update user");
-        })
+            .then(resp => resp.json())
+            .then((result) => {
+                if (result.upsertedCount > 0 || result.modifiedCount > 0) {
+                    alert("User updated")
+                    navigate("/profile");
+                } else {
+                    alert("Data already updated")
+                    navigate("/profile");
+                }
+            })
+            .catch(() => {
+                alert("failed to update user");
+            })
 
-        
+
     };
 
     return (
@@ -176,7 +187,7 @@ const UpdateProfile = () => {
                     </div>
                 </div>
                 <div className="text-center mt-4">
-                    <input type="submit" value="Submit" className="btn bg-blue-gray-200 px-8 hover:bg-[#87b1b5]"/>
+                    <input type="submit" value="Submit" className="btn bg-blue-gray-200 px-8 hover:bg-[#87b1b5]" />
                 </div>
             </div>
         </form>

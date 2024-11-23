@@ -8,10 +8,10 @@ const Academic = () => {
     );
 };
 const TeacherDetails = [
-    { id: 1, name: "Md. Rakibul Islam", title: "Programmer", email: "sajidafnan91@gmail.com" },
-    { id: 2, name: "Md. Rafiqul Islam", title: "Librarian", email: "sajidafnan91@gmail.com" },
-    { id: 3, name: "Md. Eklachur Rahman", title: "Associate Professor (Chemistry) & Head of Department Non-Tech,Professor,South Hall", email: "sajidafnan91@gmail.com" },
-    { id: 4, name: "Raihan Khan Opu", title: "Assistant Teacher and Head of Department,Professor, North Hall", email: "sajidafnan91@gmail.com" }
+    { id: 1, name: "Md. Rakibul Islam", title: "Programmer", email: "sajidafnan91@gmail.com", image:"https://i.postimg.cc/1tz0ynyc/Unknown.webp" },
+    { id: 2, name: "Md. Rafiqul Islam", title: "Librarian", email: "sajidafnan91@gmail.com", image:"https://i.postimg.cc/1tz0ynyc/Unknown.webp" },
+    { id: 3, name: "Md. Eklachur Rahman", title: "Associate Professor (Chemistry) & Head of Department Non-Tech,Professor,South Hall", email: "sajidafnan91@gmail.com", image:"https://i.postimg.cc/P5Fr0gpV/Aklacur-Sir.jpg" },
+    { id: 4, name: "Raihan Khan Opu", title: "Assistant Teacher and Head of Department,Professor, North Hall", email: "sajidafnan91@gmail.com", image:"https://i.ibb.co.com/kD43MLG/OpuSir.jpg" }
 ]
 
 export default Academic;

@@ -10,14 +10,14 @@ const NonTech = () => {
 };
 
 const TeacherDetails = [
-    { id: 22, name: "Md. Eklachur Rahman", title: "Associate Professor (Chemistry) & Head of Department Non-Tech", email: "sajidafnan91@gmail.com" },
-    { id: 23, name: "Abdus Chatter Mia", title: "Associate Professor, Physics and Officer on Special Charge, Maushi, Dhaka", email: "sajidafnan91@gmail.com" },
-    { id: 24, name: "Muhammad Yunus Ali", title: "Associate Professor, Mathematics and Officer on Special Charge, Maushi, Dhaka.", email: "sajidafnan91@gmail.com" },
-    { id: 25, name: "Md Shahjamal Molya", title: "Assistant Professor (Chemistry)", email: "sajidafnan91@gmail.com" },
-    { id: 26, name: "Jannatun Naeem", title: "Assistant Professor (Mathematics)", email: "sajidafnan91@gmail.com" },
-    { id: 27, name: "Afia Begum", title: "Lecturer (Physics)", email: "sajidafnan91@gmail.com" },
-    { id: 28, name: "Md. Fahad Hossain", title: "Lecturer (Mathematics)", email: "sajidafnan91@gmail.com" },
-    { id: 29, name: "Shihab Uddin", title: "Lecturer (Chemistry)", email: "sajidafnan91@gmail.com" },
+    { id: 25, name: "Md. Eklachur Rahman",status:"request", title: "Associate Professor (Chemistry) & Head of Department Non-Tech", email: "sajidafnan91@gmail.com", image:"https://i.postimg.cc/P5Fr0gpV/Aklacur-Sir.jpg" },
+    { id: 26, name: "Abdus Chatter Mia",status:"request", title: "Associate Professor, Physics and Officer on Special Charge, Maushi, Dhaka", email: "sajidafnan91@gmail.com", image:"https://i.postimg.cc/26W6Q05c/Abdus-Sattar-Sir.jpg" },
+    { id: 27, name: "Muhammad Yunus Ali",status:"request", title: "Associate Professor, Mathematics and Officer on Special Charge, Maushi, Dhaka.", email: "sajidafnan91@gmail.com", image:"https://i.postimg.cc/4xnXvWL6/YunusSir.jpg" },
+    { id: 28, name: "Md Shahjamal Molya",status:"request", title: "Assistant Professor (Chemistry)", email: "sajidafnan91@gmail.com", image:"https://i.postimg.cc/QNkNj9KT/Shah-Jamal-Sir.jpg" },
+    { id: 29, name: "Jannatun Naeem",status:"request", title: "Assistant Professor (Mathematics)", email: "sajidafnan91@gmail.com", image:"https://i.postimg.cc/D049NNGs/Mams-Photo.jpg" },
+    { id: 30, name: "Afia Begum",status:"request", title: "Lecturer (Physics)", email: "sajidafnan91@gmail.com", image:"https://i.postimg.cc/D049NNGs/Mams-Photo.jpg" },
+    { id: 31, name: "Md. Fahad Hossain",status:"request", title: "Lecturer (Mathematics)", email: "sajidafnan91@gmail.com", image:"https://i.postimg.cc/fLYztkH1/Fahad-Sir-math.jpg" },
+    { id: 32, name: "Shihab Uddin",status:"request", title: "Lecturer (Chemistry)", email: "sajidafnan91@gmail.com", image:"https://i.postimg.cc/Ls1RwnMh/Shihab-Sir.jpg" },
 ]
 
 export default NonTech;

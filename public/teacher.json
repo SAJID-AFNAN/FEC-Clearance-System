@@ -1,0 +1,285 @@
+[
+    {
+        "id": 1,
+        "name": "Md. Rakibul Islam",
+        "title": "Programmer",
+        "email": "sajidafnan91@gmail.com",
+        "dept": "Non Department",
+        "image": "https://i.postimg.cc/1tz0ynyc/Unknown.webp"
+    },
+    {
+        "id": 2,
+        "name": "Md. Rafiqul Islam",
+        "title": "Librarian",
+        "dept": "Non Department",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.postimg.cc/1tz0ynyc/Unknown.webp"
+    },
+    {
+        "id": 3,
+        "name": "Md. Eklachur Rahman",
+        "title": "Associate Professor (Chemistry) & Head of Department Non-Tech, Professor, South Hall",
+        "email": "sajidafnan91@gmail.com",
+        "dept": "Non Department",
+        "image": "https://i.postimg.cc/P5Fr0gpV/Aklacur-Sir.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Raihan Khan Opu",
+        "title": "Assistant Teacher and Head of Department, Professor, North Hall",
+        "email": "sajidafnan91@gmail.com",
+        "dept": "Non Department",
+        "image": "https://i.ibb.co.com/kD43MLG/OpuSir.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Raihan Khan Opu",
+        "status": "request",
+        "dept": "Non Department",
+        "title": "Assistant Teacher and Head of Department",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.ibb.co.com/kD43MLG/OpuSir.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Md Akhlas Uddin",
+        "status": "request",
+        "dept": "Non Department",
+        "title": "Lecturer",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.ibb.co.com/dDtBq3N/Akhlas-Sir.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Sohanur Rahman",
+        "status": "request",
+        "dept": "Non Department",
+        "title": "Lecturer",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.ibb.co.com/r0CGhrK/Sohanur-Sir.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Shahed Mahmud",
+        "status": "request",
+        "dept": "Non Department",
+        "title": "Workshop/Laboratory Incharge",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.ibb.co.com/M2hknCy/Shahed-Sir.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Puja Brommo",
+        "title": "Guest Lecturer",
+        "dept": "Non Department",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.postimg.cc/D049NNGs/Mams-Photo.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Faisal Ahmed",
+        "status": "request",
+        "title": "Guest Lecturer",
+        "email": "sajidafnan91@gmail.com",
+        "dept": "Non Department",
+        "image": "https://i.ibb.co.com/vQvcjJR/Faisal-Sir.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Anwar Hossain",
+        "status": "request",
+        "dept": "Non Department",
+        "title": "Guest Lecturer",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.ibb.co.com/j565S2T/AnwarSir.png"
+    },
+    {
+        "id": 12,
+        "name": "Professor Md. Alamgir Hossain",
+        "status": "request",
+        "dept": "Non Department",
+        "title": "Professor & Principal of FEC",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.postimg.cc/SNF9vMFY/Alamgir-Sir.png"
+    },
+    {
+        "id": 13,
+        "name": "Shamsul Islam",
+        "status": "request",
+        "dept": "Non Department",
+        "title": "Assistant Professor and Head of CSE Department",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.postimg.cc/4d0dtrZh/Samsul-Sir.jpg"
+    },
+    {
+        "id": 14,
+        "name": "Khalil Uddin",
+        "status": "request",
+        "dept": "Non Department",
+        "title": "Associate Teacher",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.postimg.cc/g2K3Rk7X/khalil-Sir.jpg"
+    },
+    {
+        "id": 15,
+        "name": "Md Tuhin Reza",
+        "status": "request",
+        "dept": "Non Department",
+        "title": "Lecturer",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.postimg.cc/KcsLrHQf/TuhinSir.jpg"
+    },
+    {
+        "id": 16,
+        "name": "Md Rasel Ahmed",
+        "status": "request",
+        "dept": "Non Department",
+        "title": "Lecturer",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.postimg.cc/KvBPG5r5/RaselSir.jpg"
+    },
+    {
+        "id": 17,
+        "name": "Md Suman Reza",
+        "status": "request",
+        "dept": "Non Department",
+        "title": "Lecturer",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.postimg.cc/63p2CrvF/SumanSir.jpg"
+    },
+    {
+        "id": 18,
+        "name": "Samia Akter",
+        "status": "request",
+        "dept": "Non Department",
+        "title": "Lecturer",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.postimg.cc/D049NNGs/Mams-Photo.jpg"
+    },
+    {
+        "id": 19,
+        "name": "Md Rany Ahmed",
+        "status": "request",
+        "title": "Guest Lecturer",
+        "dept": "Non Department",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.postimg.cc/F15HC3Yr/RonySir.jpg"
+    },
+    {
+        "id": 20,
+        "name": "Sanwar Hosen",
+        "status": "request",
+        "dept": "Non Department",
+        "title": "Assistant Teacher and Head of Department",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.postimg.cc/0j1TLf0B/Sanwar-Sir.jpg"
+    },
+    {
+        "id": 21,
+        "name": "Md Zillur Rahman",
+        "status": "request",
+        "title": "Lecturer",
+        "dept": "Non Department",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.postimg.cc/FzbMmLPs/Zillur-Sir.jpg"
+    },
+    {
+        "id": 22,
+        "name": "Partho Mandol",
+        "status": "request",
+        "title": "Lecturer",
+        "dept": "Non Department",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.postimg.cc/65tscM37/Partho-Sir.jpg"
+    },
+    {
+        "id": 23,
+        "name": "Apurbo Biswas",
+        "status": "request",
+        "title": "Lecturer",
+        "dept": "Non Department",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.postimg.cc/T2mGCyJs/Opurbo-Sir.jpg"
+    },
+    {
+        "id": 24,
+        "name": "Md Fahad Hosen",
+        "status": "request",
+        "title": "Guest Lecturer",
+        "dept": "Non Department",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.postimg.cc/ZqMZDpQG/FahadSir.jpg"
+    },
+    {
+        "id": 25,
+        "name": "Md. Eklachur Rahman",
+        "status": "request",
+        "dept": "Non Department",
+        "title": "Associate Professor (Chemistry) & Head of Department Non-Tech",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.postimg.cc/P5Fr0gpV/Aklacur-Sir.jpg"
+    },
+    {
+        "id": 26,
+        "name": "Abdus Chatter Mia",
+        "status": "request",
+        "dept": "Non Department",
+        "title": "Associate Professor, Physics and Officer on Special Charge, Maushi, Dhaka",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.postimg.cc/26W6Q05c/Abdus-Sattar-Sir.jpg"
+    },
+    {
+        "id": 27,
+        "name": "Muhammad Yunus Ali",
+        "status": "request",
+        "dept": "Non Department",
+        "title": "Associate Professor, Mathematics and Officer on Special Charge, Maushi, Dhaka.",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.postimg.cc/4xnXvWL6/YunusSir.jpg"
+    },
+    {
+        "id": 28,
+        "name": "Md Shahjamal Molya",
+        "status": "request",
+        "dept": "Non Department",
+        "title": "Assistant Professor (Chemistry)",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.postimg.cc/QNkNj9KT/Shah-Jamal-Sir.jpg"
+    },
+    {
+        "id": 29,
+        "name": "Jannatun Naeem",
+        "status": "request",
+        "dept": "Non Department",
+        "title": "Assistant Professor (Mathematics)",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.postimg.cc/D049NNGs/Mams-Photo.jpg"
+    },
+    {
+        "id": 30,
+        "name": "Afia Begum",
+        "status": "request",
+        "dept": "Non Department",
+        "title": "Lecturer (Physics)",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.postimg.cc/D049NNGs/Mams-Photo.jpg"
+    },
+    {
+        "id": 31,
+        "name": "Md. Fahad Hossain",
+        "status": "request",
+        "dept": "Non Department",
+        "title": "Lecturer (Mathematics)",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.postimg.cc/fLYztkH1/Fahad-Sir-math.jpg"
+    },
+    {
+        "id": 32,
+        "name": "Shihab Uddin",
+        "status": "request",
+        "dept": "Non Department",
+        "title": "Lecturer (Chemistry)",
+        "email": "sajidafnan91@gmail.com",
+        "image": "https://i.postimg.cc/Ls1RwnMh/Shihab-Sir.jpg"
+    }
+]

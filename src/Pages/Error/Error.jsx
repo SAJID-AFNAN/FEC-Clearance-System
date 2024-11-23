@@ -6,6 +6,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 
 const Error = () => {
     const { user } = useContext(AuthContext)
+    console.log(user);
     return (
         <div className="h-screen mx-auto grid place-items-center text-center px-8">
             <div>

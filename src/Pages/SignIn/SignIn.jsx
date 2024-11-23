@@ -5,6 +5,7 @@ import { Typography, Input } from "@material-tailwind/react";
 import { EyeSlashIcon, EyeIcon } from "@heroicons/react/24/solid";
 import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import background from '../../assets/Images/WhatsApp Image 2024-11-23 at 11.33.15 AM.jpeg';
 
 const SignIn = () => {
     const [passwordShown, setPasswordShown] = useState(false);
@@ -55,16 +56,19 @@ const SignIn = () => {
     // }
 
     return (
-        <section className="grid text-center h-screen items-center">
+        <section
+            style={{ backgroundImage: `url(${background})` }}
+            className="grid text-center h-screen items-center bg-cover bg-center w-full ">
             <div>
-                <div className="flex w-3/5 mx-auto mb-8">
-                    <button className="bg-red-800 text-white px-5 py-3 rounded-md font-sans">Notice</button>
+                <div className="absolute inset-0 bg-black bg-opacity-40 "></div>
+                <div className="flex w-2/5 mx-auto mb-8">
                     <Marquee pauseOnHover={true} speed={170}>
-                        <span className="font-sans text-lg">I can be a React component, multiple React components, or just some text.
+                        <span className="font-sans text-lg text-blue-gray-50">
+                            ফরিদপুর ইঞ্জিনিয়ারিং কলেজ ক্লিয়ারেন্স সিস্টেম
                         </span>
                     </Marquee>
                 </div>
-                <div className="w-[35%] mx-auto bg-[#d9dde1] px-10 py-8 rounded-xl">
+                <div className="w-[35%] mx-auto bg-white bg-opacity-70 backdrop-blur-md px-10 py-8 rounded-xl shadow-lg">
                     <Typography variant="h3" color="blue-gray" className="mb-2">
                         Sign In
                     </Typography>
@@ -75,24 +79,22 @@ const SignIn = () => {
                         <div className="mb-6">
                             <Input
                                 id="email"
-                                color="gray"
+                                color="black"
                                 size="lg"
                                 type="email"
                                 name="email"
-                                className="h-5 w-5"
                                 label="Email"
                                 ref={emailRef}
                             />
                         </div>
                         <div className="mb-6">
                             <Input
-                                id="email"
-                                color="gray"
-                                className="h-5 w-5"
-                                label="Password"
+                                id="password"
+                                color="black"
                                 size="lg"
                                 name="password"
                                 type={passwordShown ? "text" : "password"}
+                                label="Password"
                                 icon={
                                     <i onClick={togglePasswordVisiblity}>
                                         {passwordShown ? (
@@ -104,7 +106,11 @@ const SignIn = () => {
                                 }
                             />
                         </div>
-                        <input type="submit" value="SUBMIT" color="gray" size="lg" className="btn btn-neutral mt-6 w-full" />
+                        <input
+                            type="submit"
+                            value="SUBMIT"
+                            className="btn btn-neutral mt-6 w-full"
+                        />
                         <div className="!mt-4 flex justify-center">
                             <Typography
                                 as="a"
@@ -113,8 +119,9 @@ const SignIn = () => {
                                 variant="small"
                                 className="font-medium"
                             >
-                                <a href="#" className="link link-hover">Forgot password?</a>
-                                {/* <span onClick={handleResetPassword} className="hover:underline">Forgot password</span> */}
+                                <a href="#" className="link link-hover">
+                                    Forgot password?
+                                </a>
                             </Typography>
                         </div>
                         <Typography
@@ -123,12 +130,18 @@ const SignIn = () => {
                             className="!mt-4 text-center font-normal"
                         >
                             Not registered?{" "}
-                            <NavLink to="/signup" className="font-medium text-gray-900 hover:underline">Create Account</NavLink>
+                            <NavLink
+                                to="/signup"
+                                className="font-medium text-gray-900 hover:underline"
+                            >
+                                Create Account
+                            </NavLink>
                         </Typography>
                     </form>
                 </div>
             </div>
         </section>
+
     );
 }
 

@@ -18,6 +18,8 @@ import SignUp from './Pages/SignUp/SignUp'
 import AuthProvider from './Providers/AuthProvider'
 import UpdateProfile from './Pages/UpdateProfile/UpdateProfile'
 import Profile from './Pages/Profile/Profile'
+import VerificationPage from './Pages/verification/Verification'
+import AllVerifiedStudents from './Pages/verification/AllVerifiedStudents'
 
 const router = createBrowserRouter([
   {
@@ -72,6 +74,14 @@ const router = createBrowserRouter([
       {
         path: "/academic",
         element: <Academic></Academic>
+      },
+      {
+        path: "/verification",
+        element: <VerificationPage></VerificationPage>
+      },
+      {
+        path: "/allverified-student",
+        element: <AllVerifiedStudents></AllVerifiedStudents>
       },
       {
         path: "/update-profile",

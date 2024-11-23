@@ -8,16 +8,20 @@ const Root = () => {
     const { user, loading } = useContext(AuthContext)
 
     if (loading) {
-        return <Spinner className="h-16 w-16 text-gray-900/50" />
+        return <>
+            <div className="flex justify-center h-screen pt-52">
+                <Spinner className="h-32 w-32 text-gray-900/50" />
+            </div>
+        </>
     }
     return (
         <div className="flex p-4">
-            <div className="w-2/6">
+            <div className="w-2/6 h-screen top-0 sticky">
                 {
                     user && <Sidebar></Sidebar>
                 }
             </div>
-            <div className="w-full">
+            <div className="w-full ">
                 {
                     user ? <Outlet></Outlet> : <Navigate to='/error'></Navigate>
                 }

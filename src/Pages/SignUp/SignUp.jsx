@@ -5,12 +5,13 @@ import { EyeSlashIcon, EyeIcon } from "@heroicons/react/24/solid";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { sendEmailVerification } from "firebase/auth";
+import background from '../../assets/Images/WhatsApp Image 2024-11-23 at 11.33.15 AM.jpeg';
 
 const SignUp = () => {
     const [passwordShown, setPasswordShown] = useState(false);
     const togglePasswordVisiblity = () => setPasswordShown((cur) => !cur);
 
-    const { createUser,updateUser } = useContext(AuthContext)
+    const { createUser, updateUser } = useContext(AuthContext)
 
     const handleRegister = (e) => {
         e.preventDefault()
@@ -19,7 +20,7 @@ const SignUp = () => {
         const email = form.get('email')
         const password = form.get('password')
 
-        const user = {name,email}
+        const user = { name, email }
 
 
         if (password.length < 6) {
@@ -32,21 +33,21 @@ const SignUp = () => {
             .then(result => {
                 //update user
                 updateUser(name)
-                .then(()=>{
-                    fetch("https://fec-clearence-server.vercel.app/students",{
-                        method: "POST",
-                        headers:{
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(user)
+                    .then(() => {
+                        fetch("https://fec-clearance-server.onrender.com/students", {
+                            method: "POST",
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(user)
+                        })
+                        alert('User Created Successfully')
                     })
-                    alert('User Created Successfully')
-                })
-                .catch(()=>{
-                    alert("Failed to add user name")
-                })
+                    .catch(() => {
+                        alert("Failed to add user name")
+                    })
                 //send verification 
-                 sendEmailVerification(result.user)
+                sendEmailVerification(result.user)
                     .then(() => {
                         alert("Please check your email and verify")
                     })
@@ -58,8 +59,11 @@ const SignUp = () => {
     }
 
     return (
-        <section className="grid text-center h-screen items-center p-8">
-            <div className="border border-black bg-[#d9dde1] w-[35%] mx-auto px-10 py-8 rounded-xl">
+        <section
+            style={{ backgroundImage: `url(${background})` }}
+            className="grid text-center h-screen items-center p-8 bg-cover bg-center w-full">
+            <div className="absolute inset-0 bg-black bg-opacity-40 "></div>
+            <div className="w-[35%] mx-auto bg-white bg-opacity-70 backdrop-blur-md px-10 py-8 rounded-xl shadow-lg">
                 <Typography variant="h3" color="blue-gray" className="mb-2">
                     Create Account
                 </Typography>
@@ -70,7 +74,7 @@ const SignUp = () => {
                     <div className="mb-8">
                         <Input
                             id="name"
-                            color="gray"
+                            color="black"
                             size="lg"
                             type="text"
                             name="name"
@@ -82,7 +86,7 @@ const SignUp = () => {
                     <div className="mb-8">
                         <Input
                             id="email"
-                            color="gray"
+                            color="black"
                             size="lg"
                             type="email"
                             name="email"
@@ -97,6 +101,7 @@ const SignUp = () => {
                             size="lg"
                             name="password"
                             label="Password"
+                            color="black"
                             required
                             className="h-5 w-5"
                             type={passwordShown ? "text" : "password"}
