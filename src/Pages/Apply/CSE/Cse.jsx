@@ -12,7 +12,7 @@ const TeacherDetails = [
     { id: 12, name: "Professor Md. Alamgir Hossain",status:"request", title: "Professor & Principal of FEC", email: "sajidafnan91@gmail.com", image:"https://i.postimg.cc/SNF9vMFY/Alamgir-Sir.png" },
     { id: 13, name: "Shamsul Islam",status:"request", title: "Assistant Professor and Head of CSE Department", email: "sajidafnan91@gmail.com", image:"https://i.postimg.cc/4d0dtrZh/Samsul-Sir.jpg" },
     { id: 14, name: "Khalil Uddin",status:"request", title: "Associate Teacher", email: "sajidafnan91@gmail.com", image:"https://i.postimg.cc/g2K3Rk7X/khalil-Sir.jpg" },
-    { id: 15, name: "Md Tuhin Reza",status:"request", title: "Lecturer", email: "sajidafnan91@gmail.com", image:"https://i.postimg.cc/KcsLrHQf/TuhinSir.jpg" },
+    { id: 15, name: "Md Tuhin Reza",status:"request", title: "Lecturer", email: "mdmahealam98@gmail.com", image:"https://i.postimg.cc/KcsLrHQf/TuhinSir.jpg" },
     { id: 16, name: "Md Rasel Ahmed",status:"request", title: "Lecturer", email: "sajidafnan91@gmail.com", image:"https://i.postimg.cc/KvBPG5r5/RaselSir.jpg" },
     { id: 17, name: "Md Suman Reza",status:"request", title: "Lecturer", email: "sajidafnan91@gmail.com", image:"https://i.postimg.cc/63p2CrvF/SumanSir.jpg" },
     { id: 18, name: "Samia Akter",status:"request", title: "Lecturer", email: "sajidafnan91@gmail.com", image:"https://i.postimg.cc/D049NNGs/Mams-Photo.jpg" },

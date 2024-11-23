@@ -1,13 +1,14 @@
 import { useEffect, useState, useRef } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import SignatureCanvas from "react-signature-canvas";
 import { toast } from "react-toastify";
-import swal from 'sweetalert';
+// import swal from 'sweetalert';
 import "react-toastify/dist/ReactToastify.css";
 
 const VerificationPage = () => {
   const [searchParams] = useSearchParams();
   const email = searchParams.get("email");
+  const navigate = useNavigate()
   const [studentData, setStudentData] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const sigCanvas = useRef();
@@ -46,9 +47,12 @@ const VerificationPage = () => {
       .then((data) => {
         console.log(data);
         toast.success("Verification successful!");
-        swal("Successfully! given clearance", {
-          icon: "success",
-        });
+        setTimeout(() => {
+          navigate("/allverified-student");
+        }, 1000);
+        // swal("Successfully! given clearance", {
+        //   icon: "success",
+        // });
       })
       .catch((error) => {
         console.error("Error updating verification:", error);

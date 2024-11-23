@@ -50,13 +50,13 @@ const Dashboard = () => {
                     </div>
                 </div>
             </div>
-            <div className="rounded-2xl h-96">
+            <div className="bg-gray-200 rounded-2xl h-96">
                 {/* <p className="text-center text-7xl text-brown-200 p-36">No Notification</p> */}
-                {/* <div className="border-b-2 border-blue-gray-200 py-3 px-6  flex justify-between my-4">
+                <div className="border-b-2 border-blue-gray-200 py-3 px-6  flex justify-between my-4">
                     <p><span className="text-2xl font-semibold font-serif">Samsul Islam</span> <br /> <span className="font-sans text-lg">Assistant professor</span></p>
                     <p className="px-8 py-4 text-lg">Request Pending....</p>
-                </div> */}
-                <AllVerifiedStudents></AllVerifiedStudents>
+                </div>
+                {/* <AllVerifiedStudents></AllVerifiedStudents> */}
             </div>
 
         </div>
