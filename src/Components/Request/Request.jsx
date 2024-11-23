@@ -44,7 +44,7 @@ const Request = ({ data }) => {
     // const frontend_url = "http://localhost:5173";
 
     const handleRequest = () => {
-        const verificationLink = `${"http://localhost:5173"}/verification?email=${userData?.email}`;
+        const verificationLink = `${"https://alumni-clearance.web.app"}/verification?email=${userData?.email}`;
         const templateParams = {
             from_name: user?.displayName || "User",
             notes: 'Check this out!',
